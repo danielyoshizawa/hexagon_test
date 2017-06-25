@@ -1,8 +1,17 @@
 cmake_minimum_required(VERSION 3.3)
-project(hexagon_test)
 
+project(hexagon)
+
+set(CMAKE_INCLUDE_CURRENT_DIR ON)
+set(CMAKE_AUTOMOC ON)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
 set(SOURCE_FILES main.cpp)
 
-add_executable(hexagon_test ${SOURCE_FILES})
+find_package(Qt5 COMPONENTS Widgets REQUIRED)
+
+add_executable(hexagon ${SOURCE_FILES})
+
+target_link_libraries(hexagon Qt5::Widgets)
+
+add_subdirectory(unit_tests)

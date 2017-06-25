@@ -1,3 +1,7 @@
 .idea/
 build/
 *.log
+*_automoc.cpp
+controllers/
+models/
+views/
