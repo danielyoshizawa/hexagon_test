@@ -14,9 +14,13 @@ set(VIEW_FILES
         views/MainWindow.cpp
         )
 
+set(CONTROLLER_FILES
+        controllers/MainWindowController.cpp
+        )
+
 find_package(Qt5 COMPONENTS Widgets REQUIRED)
 
-add_executable(hexagon ${SOURCE_FILES} ${VIEW_FILES})
+add_executable(hexagon ${SOURCE_FILES} ${VIEW_FILES} ${CONTROLLER_FILES})
 
 target_link_libraries(hexagon Qt5::Widgets)
 
