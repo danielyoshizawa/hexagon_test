@@ -11,19 +11,19 @@ set(SOURCE_FILES
         )
 
 set(VIEW_FILES
-        views/MainWindow.cpp
+        view/MainWindow.cpp
         )
 
 set(CONTROLLER_FILES
-        controllers/MainWindowController.cpp
+        controller/MainWindowController.cpp
         )
 
 set(MODEL_FILES
-        )
+        model/commands/CommandManager.cpp model/commands/CommandManager.h)
 
 set(INTERFACE_FILES
-        views/iView.h
-        )
+        view/iView.h
+        model/commands/iCommand.h)
 
 find_package(Qt5 COMPONENTS Widgets REQUIRED)
 
