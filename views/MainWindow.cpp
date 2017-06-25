@@ -3,10 +3,21 @@
 MainWindow::MainWindow( ) :
         QMainWindow( 0 )
 {
-    this->setMinimumSize(300, 300);
+    initialize();
+    configure();
 }
 
 MainWindow::~MainWindow()
 {
 
+}
+
+void MainWindow::initialize()
+{
+
+}
+
+void MainWindow::configure()
+{
+    this->setMinimumSize(800, 600);
 }

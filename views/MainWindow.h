@@ -3,10 +3,15 @@
 
 #include <QtWidgets>
 #include <QMainWindow>
+#include "iView.h"
 
-class MainWindow : public QMainWindow
+class MainWindow : public QMainWindow, public iView
 {
     Q_OBJECT
+
+private:
+    void initialize();
+    void configure();
 
 public:
     MainWindow();

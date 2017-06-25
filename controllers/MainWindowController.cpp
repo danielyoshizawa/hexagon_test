@@ -3,11 +3,15 @@
 
 MainWindowController::~MainWindowController()
 {
-
+    delete view;
 }
 
 MainWindowController::MainWindowController()
 {
-    MainWindow * view = new MainWindow();
+    view = new MainWindow();
+}
+
+void MainWindowController::start()
+{
     view->show();
 }
